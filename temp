@@ -1,0 +1,113 @@
+/* ── Dark (default) ── */
+:root,
+[data-theme="dark"] {
+  --background: #181926;
+  --foreground: #cad3f5;
+  --card: #24273a;
+  --card-foreground: #cad3f5;
+  --popover: #1e2030;
+  --popover-foreground: #cad3f5;
+  --primary: #c6a0f6;
+  --primary-foreground: #181926;
+  --secondary: #494d64;
+  --secondary-foreground: #cad3f5;
+  --muted: #1e2030;
+  --muted-foreground: #a5adcb;
+  --accent: #5b6078;
+  --accent-foreground: #cad3f5;
+  --destructive: #ed8796;
+  --destructive-foreground: #181926;
+  --border: #363a4f;
+  --input: #363a4f;
+  --ring: #c6a0f6;
+
+  --sidebar: #1e2030;
+  --sidebar-foreground: #cad3f5;
+  --sidebar-border: #363a4f;
+  --sidebar-accent: #363a4f;
+  --sidebar-accent-foreground: #cad3f5;
+
+  --scrollbar-track: #1e2030;
+  --scrollbar-border: #363a4f;
+
+  --dialogue-color: #c6a0f6;
+  --blockquote-color: #a5adcb;
+  --blockquote-border: #8aadf4;
+  --code-bg: #1e2030;
+  --code-fg: #a6da95;
+  --code-border: #363a4f;
+}
+
+/* ── Light (Catppuccin Latte as the natural pair) ── */
+[data-theme="light"] {
+  --background: #eff1f5;
+  --foreground: #4c4f69;
+  --card: #e6e9ef;
+  --card-foreground: #4c4f69;
+  --popover: #dce0e8;
+  --popover-foreground: #4c4f69;
+  --primary: #8839ef;
+  --primary-foreground: #eff1f5;
+  --secondary: #ccd0da;
+  --secondary-foreground: #4c4f69;
+  --muted: #dce0e8;
+  --muted-foreground: #6c6f85;
+  --accent: #bcc0cc;
+  --accent-foreground: #4c4f69;
+  --destructive: #d20f39;
+  --destructive-foreground: #eff1f5;
+  --border: #ccd0da;
+  --input: #ccd0da;
+  --ring: #8839ef;
+
+  --sidebar: #e6e9ef;
+  --sidebar-foreground: #4c4f69;
+  --sidebar-border: #ccd0da;
+  --sidebar-accent: #ccd0da;
+  --sidebar-accent-foreground: #4c4f69;
+
+  --scrollbar-track: #e6e9ef;
+  --scrollbar-border: #ccd0da;
+
+  --dialogue-color: #8839ef;
+  --blockquote-color: #6c6f85;
+  --blockquote-border: #1e66f5;
+  --code-bg: #dce0e8;
+  --code-fg: #40a02b;
+  --code-border: #ccd0da;
+}
+
+/* ── Markdown ── */
+
+.mari-md-blockquote {
+  border-left-color: var(--blockquote-border);
+  color: var(--blockquote-color);
+}
+
+.mari-md-inline-code {
+  background: var(--code-bg);
+  color: var(--code-fg);
+  border-color: var(--code-border);
+}
+
+.mari-md-codeblock {
+  background: var(--code-bg);
+  color: var(--code-fg);
+  border-color: var(--code-border);
+}
+
+/* ── Dialogue quotes ──
+   When no dialogueColor prop is set, the engine uses Tailwind's
+   text-black dark:text-white. Override by targeting strong (boldDialogue=true)
+   scoped to the message content wrapper. */
+
+.mari-message-content strong {
+  color: var(--dialogue-color);
+}
+
+/* ── Scrollbars ── */
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--popover); }
